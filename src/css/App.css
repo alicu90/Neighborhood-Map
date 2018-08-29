@@ -1,0 +1,111 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+label,
+.geosuggest-label {
+  display: none;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+p {
+  font-size: 0.95em;
+}
+
+.error-container {
+  width: 80%;
+  width-margin-top: 5em;
+  width-position: relative;
+  text-align: left;
+  text-align-padding: 1em;
+}
+
+
+.sidebar-navigation {
+  z-index: 10;
+  height: 84vh;
+  width: 80vw;
+  margin: auto;
+  position: absolute;
+  background-color: rgb(18, 56, 56);
+  color: #d9dee5;
+  -webkit-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+  visibility: visible;
+}
+
+.venue-search-container input {
+  width: 90%;
+  margin: auto;
+  margin-top: 0.5em;
+  border: 2px solid transparent;
+  -webkit-box-shadow: 0 0 1px #5b493d;
+          box-shadow: 0 0 1px #5b493d;
+  padding: .5em 1em;
+  -webkit-transition: border 0.2s, box-shadow 0.2s;
+  -webkit-transition-transition: border 0.2s, box-shadow 0.2s;
+}
+
+.venue-search-container input:focus {
+  border-color: #c9985e;
+  -webkit-box-shadow: 0 0 0 transparent;
+          box-shadow: 0 0 0 transparent;
+}
+
+.venue-search-container .venue-list-content {
+  height: 70vh;
+  padding: 0.5em;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+.venue-search-container .venue-name {
+  font-size: 0.95em;
+  line-height: 1;
+  margin: 0;
+}
+
+.venue-search-container .venue-name:hover, .venue-search-container .venue-name:focus {
+  cursor: pointer;
+}
+
+.info-window {
+  padding-top: 0.5em;
+  color: #176069;
+}
+
+
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  .sidebar-navigation {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-device-width: 768px) {
+  .sidebar-navigation {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-device-width: 1024px) {
+  .sidebar-navigation {
+    width: 20vw;
+  }
+}

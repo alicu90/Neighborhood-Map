@@ -1,0 +1,167 @@
+// Color palette
+$p-dark: #5b493d
+$p-medium: #c9985e
+$p-light: #e2d7c6
+$s-dark: #455557
+$s-medium: #abb7c9
+$s-light: #d9dee5
+
+// Font sizes  
+$large: 1.5em
+$medium: 1.1em
+$small: 0.95em
+
+// General styles
+*
+    box-sizing: border-box
+
+label, 
+.geosuggest-label
+    display: none
+
+.App 
+    text-align: center
+    height: 100vh
+    width: 100vw
+    font-family: 'Roboto Condensed', sans-serif
+
+h1 
+    font-size: $large
+    font-weight: bolder
+
+h2 
+    font-size: $medium
+
+p 
+    font-size: $small
+
+.error-container    
+	width: 80%
+    margin-top: 5em
+    position: relative
+	text-align: left
+    padding: 1em
+
+
+// Header styles
+.header 
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    justify-content: space-between
+    background-color: $s-light
+    height: 10vh
+    padding: 0.2em
+    
+    .app-name
+        display: inline-flex
+        .app-logo 
+            height: 48px
+            width: 48px
+            margin: auto            
+            margin-right: 0.8em
+
+        .app-title 
+            font-size: $large
+            margin: auto
+            // margin-bottom: 0
+            margin-right: 0.8em
+            color: $p-dark
+
+    .btn
+        padding: 0.2em
+        position: relative
+        border: none
+        color: $p-medium
+        margin-left: 0.8em
+
+        &:hover
+            cursor: pointer
+        
+        .fa
+            font-size: 36px
+
+
+// Sidebar styles
+.sidebar-navigation
+    z-index: 10
+    height: 84vh
+    width: 80vw
+    margin: auto
+    position: absolute
+    background-color: $s-dark
+    color: $s-light
+    transition: width 0.3s ease-in
+    visibility: hidden
+
+// Venues search styles
+.venue-search-container
+    input
+        width: 90%
+        margin: auto
+        margin-top: 0.5em
+        border: 2px solid transparent
+        box-shadow: 0 0 1px $p-dark
+        padding: .5em 1em
+        -webkit-transition: border 0.2s, box-shadow 0.2s
+            transition: border 0.2s, box-shadow 0.2s
+        &:focus 
+            border-color: $p-medium
+            box-shadow: 0 0 0 transparent
+
+    .venue-list-content
+        height: 70vh
+        padding: 0.5em
+        list-style-type: none
+        margin: 0
+        margin-top: 0.5em
+        overflow-y: scroll
+
+    .venue-name
+        font-size: $small
+        line-height: 1
+        margin: 0
+
+        &:hover,
+        &:focus
+            cursor: pointer
+            box-shadow: 
+
+.info-window
+    padding-top: 0.5em
+    color: $s-dark
+
+footer
+    width: 100vw
+    height: 6vh
+    background-color: $s-light
+    color: $p-dark
+    text-align: center
+    padding: 2px
+    p 
+        font-size: 0.5em
+        line-height: 0.8
+
+@media only screen and (max-device-width: 767px) and (orientation: landscape)
+    .sidebar-navigation
+        width: 50vw
+    
+    .geosuggest
+        right: 1em
+        width: 50vw
+
+
+@media screen and (min-device-width: 768px)
+    $large: 2.5em
+
+    .sidebar-navigation
+        width: 30vw
+
+    .geosuggest
+        right: 1em
+        width: 40vw
+
+@media screen and (min-device-width: 1024px)
+    .sidebar-navigation
+        width: 20vw
+
