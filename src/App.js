@@ -32,11 +32,17 @@ class App extends Component {
     mapsError: false
   }
 
+  gm_authFailure(){
+    window.alert("Google Maps error!")
+  }
+
   componentWillMount() {
     this.getVenues(this.state.location);
   }
 
-
+  componentDidMount(){
+    window.gm_authFailure = this.gm_authFailure;
+  }
 
   // Clear venues
   clearVenues = () => {
