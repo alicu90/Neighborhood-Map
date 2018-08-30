@@ -23,6 +23,7 @@ When using CRA you have to run the app in production mode to get service worker 
   * recompose
   * webpack
   * escape-string-regexp
+- You have to type npm start here to run the app.
 - open browser and go to http://localhost:3000/ 
 
 ## Places from project
