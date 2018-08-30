@@ -91,6 +91,11 @@ p {
   color: #176069;
 }
 
+@media only screen and (max-device-width: 375px) and (orientation: portrait) {
+  .sidebar-navigation {
+    width: 35vw;
+  }
+}
 
 @media only screen and (max-device-width: 767px) and (orientation: landscape) {
   .sidebar-navigation {
